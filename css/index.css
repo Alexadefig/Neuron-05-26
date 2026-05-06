@@ -1,0 +1,477 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    border-radius: .3125rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Styles */
+
+:root {
+    /* Colors */
+    --color-black: #1F1F1F;
+    --color-light: #F3F3F3;
+    --color-primary: #4391F0;
+    --color-white: #FFF;
+    --color-error: #E26868;
+
+    /* Fonts */
+    --text-xl: normal normal 400 normal clamp(3em, 5vw, 4em) normal, "Hedvig Letters Serif", serif;
+    --text-lg: normal normal 400 normal clamp(1.5em, 5vw, 2em) normal, "Hedvig Letters Serif", serif;
+    --text-md: normal normal 400 normal clamp(1.1875em, 5vw, 1.5em) normal, "Hedvig Letters Serif", serif;
+    --text-sm: normal normal 500 normal clamp(1.0625em, 5vw, 1.1875em) normal, "Instrument Sans", sans-serif;
+    --text-xs: normal normal 400 normal clamp(.875rem, 5vw, 1rem) normal, "Instrument Sans", sans-serif;
+
+    /* Spaces */
+    --space-1: .25rem;
+    --space-2: .5rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+
+    /* Layout */
+    --max-width: 57.5rem;
+    --max-width-xl: 88.75rem;
+    --min-width: 18rem;
+    --min-width-xs: 12.5rem;
+
+    /* Border */
+    --radius-sm: .3125rem;
+}
+
+/* Components */
+h1,
+.h1 {
+    font: var(--text-xl);
+}
+
+h2,
+.h2 {
+    font: var(--text-lg);
+}
+
+h3,
+.h3 {
+    font: var(--text-md);
+}
+
+h4,
+.h4 {
+    font: var(--text-sm);
+}
+
+p,
+.body,
+label,
+input,
+select,
+textarea {
+    font: var(--text-xs);
+}
+
+label {
+    display: none;
+}
+
+a,
+.link,
+ul {
+    font: var(--text-xs);
+    font-weight: 500;
+}
+
+.btn {
+    padding: .625rem 2rem;
+    border-radius: var(--space-12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+
+
+    &.btn--dark {
+        background-color: var(--color-black);
+        color: var(--color-light);
+    }
+
+
+    &.btn--dark:hover {
+        background-color: var(--color-black);
+        color: var(--color-light);
+    }
+
+
+    &.btn--light {
+        background-color: var(--color-light);
+        color: var(--color-black);
+    }
+}
+
+input,
+select {
+    padding: 1rem 1.1875rem;
+    border-radius: 5rem;
+    border: none;
+    background-color: var(--color-light);
+    width: 100%;
+}
+
+select {
+    border-right: 1.1875rem solid var(--color-light);
+}
+
+button[type="submit"] {
+    background-color: var(--color-primary);
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+    color: var(--color-white);
+    border: none;
+    padding: var(--space-4);
+}
+
+.section {
+    padding: var(--space-16) var(--space-4);
+}
+
+.block {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.block--xl {
+    max-width: var(--max-width-xl);
+    margin: 0 auto;
+}
+
+/* Components*/
+
+/* Header */
+
+.header {
+    padding: var(--space-8);
+}
+
+.header__block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: 5.75rem;
+    border-radius: 0;
+}
+
+.header__nav {
+
+    & ul {
+        display: flex;
+        gap: var(--space-8);
+        list-style: none;
+        align-items: center;
+    }
+}
+
+/* Hero */
+
+.hero {
+    color: var(--color-light);
+    padding: 0 .625rem;
+}
+
+.hero__background {
+    background: linear-gradient(90deg, rgba(31, 31, 31, .2) 0%, rgba(31, 31, 31, .2) 100%), url("/Neuron/media/img/Home-banner.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 50rem;
+    border-radius: .3125rem;
+    max-width: var(--max-width-xl);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-6)
+}
+
+.hero__block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--space-4);
+}
+
+.background--services {
+
+    background: linear-gradient(90deg, rgba(31, 31, 31, .2) 0%, rgba(31, 31, 31, .2) 100%), url("/Neuron/media/img/Services-banner.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 50rem;
+    border-radius: .3125rem;
+    max-width: var(--max-width-xl);
+    margin: 0 auto;
+
+}
+
+/* Hero */
+
+/* CTA */
+
+.cta__block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-16);
+}
+
+.cta__image {
+    flex: 1 1 var(--min-width);
+}
+
+.cta__content {
+    flex: 1 1 var(--min-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: var(--space-8);
+}
+
+.cta__heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+
+}
+
+/* CTA */
+
+/* Features */
+
+.features__block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--min-width-xs), 1fr));
+}
+
+.features__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-4);
+}
+
+.features__card-heading {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+/* Features */
+
+/* Services */
+.services__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: start;
+}
+
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 1fr));
+    gap: var(--space-4);
+    padding: var(--space-4) 0;
+}
+
+.services__list-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Prices */
+.prices__block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.prices__card {
+    flex: 1 1 var(--min-width-xs);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-8);
+    gap: var(--space-12);
+    background-color: var(--color-light);
+    border-radius: var(--radius-sm);
+
+    &.prices__card--dark {
+        background-color: var(--color-black);
+        color: var(--color-light);
+    }
+}
+
+.prices__head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.prices__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+
+    & li {
+        display: flex;
+        gap: var(--space-4);
+        align-items: center;
+
+        & .ri-close-circle-line {
+            color: var(--color-error);
+        }
+    }
+}
+
+/* Contact */
+
+.contact__block {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+
+}
+
+.contact__map {
+    flex: 2 1 var(--min-width);
+
+
+    & iframe {
+        height: 100%;
+        width: 100%;
+        border-radius: var(--radius-sm);
+        filter: grayscale();
+    }
+}
+
+.contact__content {
+    flex: 1 1 var(--min-width);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    align-self: center;
+    padding: 3rem 0;
+
+
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.contact__form-row {
+    display: flex;
+    gap: .25rem;
+}
+
+
+.contact__form-acceptance {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    gap: var(--space-4);
+
+    & input {
+        width: auto;
+    }
+}
+
+/* latest post */
+
+.latest-post__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.latest-post__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--min-width-xs), 1fr));
+    gap: var(--space-4);
+    padding: var(--space-4) 0;
+}
+
+.services__list-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+
+}
+
+.footer {
+    padding: 0.625rem
+}
+
+.footer__block {
+    background-color: var(--color-black);
+    color: var(--color-light);
+    border-radius: var(--radius-sm);
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-4) 0;
+}
+
+.footer__social {
+    display: flex;
+    gap: var(--space-4);
+
+}
+
+.footer__legal {
+    display: flex;
+    gap: var(--space-6);
+    padding: var(--space-4) 0;
+}
