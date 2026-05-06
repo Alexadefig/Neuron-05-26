@@ -201,7 +201,7 @@ button[type="submit"] {
 }
 
 .hero__background {
-    background: linear-gradient(90deg, rgba(31, 31, 31, .2) 0%, rgba(31, 31, 31, .2) 100%), url("/Neuron/media/img/Home-banner.webp");
+    background: linear-gradient(90deg, rgba(31, 31, 31, .2) 0%, rgba(31, 31, 31, .2) 100%), url("/Neuron/media/img/images.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
