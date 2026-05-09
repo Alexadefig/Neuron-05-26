@@ -189,7 +189,8 @@ button[type="submit"] {
         display: flex;
         gap: var(--space-8);
         list-style: none;
-        align-items: center;}
+        align-items: center;
+    }
 }
 
 /* Hero */
@@ -242,7 +243,19 @@ button[type="submit"] {
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 15.625rem;
-        justify-content: center;}
+        justify-content: center;
+    }
+
+    &.hero__background--contact {
+        background: linear-gradient(90deg, rgba(31, 31, 31, .2) 0%, rgba(31, 31, 31, .2) 100%),
+            url('/media/img/Contact-banner.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 15.625rem;
+        justify-content: center;
+    }
+
 }
 
 .hero__block {
@@ -275,6 +288,17 @@ button[type="submit"] {
     }
 
     &.hero__block--news {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        & h1 {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+        &.hero__block--contact {
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -541,8 +565,8 @@ button[type="submit"] {
         aspect-ratio: 4/3;
         object-fit: cover;
     }
-    
-        & p {
+
+    & p {
         flex-grow: 1;
     }
 }
